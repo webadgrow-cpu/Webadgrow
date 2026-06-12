@@ -1,68 +1,67 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WebAdGrow | Digital Marketing & Web Development Solutions</title>
-    <!-- FontAwesome Icons -->
+    <title>WebAdGrow | Smart Digital Marketing & Custom Web Development</title>
+    <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <style>
         :root {
-            --primary-color: #0d4b75;
-            --secondary-color: #e67e22;
-            --accent-color: #2ecc71;
-            --dark-color: #1a252f;
-            --light-color: #f8f9fa;
-            --text-color: #333;
+            --primary: #004b6e;
+            --secondary: #e67e22;
+            --dark: #2c3e50;
+            --light: #f8f9fa;
+            --white: #ffffff;
+            --text: #333333;
         }
-        
+
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            scroll-behavior: smooth;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
         }
 
         body {
-            background-color: #f4f7f6;
-            color: var(--text-color);
+            color: var(--text);
+            background-color: var(--white);
             line-height: 1.6;
         }
 
-        /* Top Header Contact Bar */
+        /* Top Bar Contact Info */
         .top-bar {
-            background-color: var(--dark-color);
-            color: #fff;
-            padding: 10px 40px;
+            background-color: var(--dark);
+            color: var(--white);
+            padding: 8px 5%;
             display: flex;
             justify-content: space-between;
-            align-items: center;
             flex-wrap: wrap;
-            font-size: 14px;
-            border-bottom: 2px solid var(--secondary-color);
+            font-size: 0.85rem;
         }
 
-        .top-bar .info-item {
-            margin-right: 20px;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .top-bar a {
-            color: #fff;
+        .top-bar .contact-info a {
+            color: var(--white);
             text-decoration: none;
+            margin-right: 15px;
+        }
+
+        .top-bar .contact-info i {
+            color: var(--secondary);
+            margin-right: 5px;
         }
 
         /* Navigation Header */
         header {
-            background: #fff;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 10px 5%;
             position: sticky;
             top: 0;
             z-index: 1000;
-            padding: 10px 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -71,280 +70,200 @@
         .logo-container {
             display: flex;
             align-items: center;
-            gap: 15px;
         }
 
-        /* Premium Optimized Logo Size */
-        .logo-container img {
-            height: 75px;
-            width: 75px;
+        .logo-img {
+            height: 60px; /* Adjusted size for visibility */
+            width: auto;
             object-fit: contain;
-            border-radius: 50%;
-            border: 2px solid var(--primary-color);
-            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-            background: #fff;
-        }
-
-        .logo-text {
-            font-size: 26px;
-            font-weight: 800;
-            color: var(--primary-color);
-        }
-        .logo-text span {
-            color: var(--secondary-color);
         }
 
         nav ul {
             display: flex;
             list-style: none;
-            gap: 25px;
+        }
+
+        nav ul li {
+            margin-left: 20px;
         }
 
         nav ul li a {
             text-decoration: none;
-            color: #444;
-            font-weight: 600;
-            font-size: 15px;
-            text-transform: uppercase;
+            color: var(--dark);
+            font-weight: 500;
             transition: color 0.3s;
-            padding: 5px 0;
         }
 
         nav ul li a:hover {
-            color: var(--primary-color);
-            border-bottom: 2px solid var(--secondary-color);
+            color: var(--secondary);
         }
 
-        /* Banner & Hero Section */
-        .hero-section {
-            background: linear-gradient(135deg, #fdfbf7 0%, #eef2f3 100%);
-            padding: 40px 20px 60px 20px;
-            text-align: center;
-        }
-
-        /* Perfectly Visible High Definition Banner Container */
+        /* Banner Section */
         .banner-container {
-            max-width: 1150px;
-            margin: 0 auto 35px auto;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-            border-radius: 15px;
-            overflow: hidden;
-            border: 5px solid #fff;
-            background: #fff;
+            width: 100%;
+            text-align: center;
+            background: #f1f2f6;
         }
 
-        .banner-container img {
+        .main-banner {
             width: 100%;
+            max-width: 1200px;
             height: auto;
             display: block;
-        }
-
-        .hero-text h1 {
-            font-size: 34px;
-            color: var(--primary-color);
-            margin-bottom: 15px;
-            font-weight: 800;
-        }
-
-        .hero-text p {
-            font-size: 18px;
-            max-width: 850px;
-            margin: 0 auto 25px auto;
-            color: #555;
-        }
-
-        /* Page Content Structure */
-        section {
-            padding: 80px 20px;
-            max-width: 1200px;
             margin: 0 auto;
         }
 
-        .section-title {
-            font-size: 32px;
-            color: var(--primary-color);
+        /* Introduction / Headline Area */
+        .intro-section {
             text-align: center;
-            margin-bottom: 10px;
-            font-weight: 700;
-            text-transform: uppercase;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
         }
 
-        .section-subtitle {
-            font-size: 16px;
-            color: #666;
+        .intro-section h1 {
+            color: var(--primary);
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .intro-section p {
+            font-size: 1.1rem;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* About & Solutions Shared Styling */
+        .section-title {
             text-align: center;
+            margin: 50px 0 30px 0;
+            color: var(--primary);
+            font-size: 2.2rem;
+            text-transform: uppercase;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 60px;
+            height: 3px;
+            background: var(--secondary);
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Pricing Section */
+        .pricing-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            padding: 20px 5%;
             margin-bottom: 50px;
         }
 
-        /* About Us Details Layout */
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: center;
-            background: #fff;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        }
-
-        .about-text h3 {
-            font-size: 24px;
-            color: var(--secondary-color);
-            margin-bottom: 15px;
-        }
-
-        .about-text p {
-            margin-bottom: 15px;
-            color: #555;
-        }
-
-        /* Services Cards Grid */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-        }
-
-        .service-card {
-            background: #fff;
-            padding: 35px 25px;
+        .pricing-card {
+            background: var(--white);
             border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            border-top: 4px solid var(--primary-color);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            width: 320px;
+            padding: 30px 20px;
+            text-align: center;
+            position: relative;
+            border-top: 5px solid var(--primary);
+            transition: transform 0.3s;
         }
 
-        .service-card i {
-            font-size: 40px;
-            color: var(--secondary-color);
+        .pricing-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .pricing-card.popular {
+            border-top-color: var(--secondary);
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--secondary);
+            color: var(--white);
+            padding: 4px 10px;
+            font-size: 0.75rem;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+
+        .pricing-card h3 {
+            color: var(--dark);
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            font-size: 2.2rem;
+            color: var(--primary);
+            font-weight: 700;
             margin-bottom: 20px;
         }
 
-        .service-card h3 {
-            font-size: 22px;
-            color: var(--primary-color);
-            margin-bottom: 15px;
+        .price span {
+            font-size: 1rem;
+            color: #777;
         }
 
-        .service-card ul {
+        .pricing-features {
             list-style: none;
-            color: #555;
-        }
-
-        .service-card ul li {
-            margin-bottom: 10px;
-            padding-left: 20px;
-            position: relative;
-        }
-
-        .service-card ul li::before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: var(--accent-color);
-            font-weight: bold;
-        }
-
-        /* Pricing Card Grid */
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .pricing-card {
-            background: #fff;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            padding: 40px 30px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            border-top: 5px solid var(--primary-color);
-        }
-
-        .pricing-card.featured {
-            border-top-color: var(--secondary-color);
-            transform: scale(1.03);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-        }
-
-        .pricing-card.featured .badge {
-            position: absolute;
-            top: 15px;
-            right: -30px;
-            background: var(--secondary-color);
-            color: white;
-            padding: 4px 30px;
-            transform: rotate(45deg);
-            font-size: 12px;
-            font-weight: bold;
-        }
-
-        .plan-name {
-            font-size: 24px;
-            font-weight: 700;
-            margin-bottom: 15px;
-        }
-
-        .plan-price {
-            font-size: 36px;
-            font-weight: 800;
-            color: var(--primary-color);
-            margin-bottom: 25px;
-        }
-
-        .plan-features {
-            list-style: none;
+            margin-bottom: 30px;
             text-align: left;
-            margin-bottom: 35px;
         }
 
-        .plan-features li {
-            padding: 12px 0;
-            border-bottom: 1px solid #f0f0f0;
-            font-size: 15px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+        .pricing-features li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+            font-size: 0.95rem;
         }
 
-        .plan-features li i {
-            color: var(--accent-color);
+        .pricing-features li i {
+            color: #2ecc71;
+            margin-right: 10px;
         }
 
-        .cta-btn {
-            display: block;
-            background: var(--primary-color);
-            color: white;
+        .btn-book {
+            display: inline-block;
+            width: 100%;
+            padding: 12px;
+            background-color: var(--primary);
+            color: var(--white);
             text-decoration: none;
-            padding: 12px 25px;
-            border-radius: 25px;
-            font-weight: bold;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background 0.3s;
         }
 
-        .pricing-card.featured .cta-btn {
-            background: var(--secondary-color);
+        .pricing-card.popular .btn-book {
+            background-color: var(--secondary);
         }
 
-        /* Premium Lead Form Box (Mimics Google Forms) */
-        .google-form-box {
-            background: #fff;
+        .btn-book:hover {
+            opacity: 0.9;
+        }
+
+        /* Lead Form Section */
+        .form-section {
+            background-color: var(--light);
+            padding: 60px 5%;
+        }
+
+        .form-wrapper {
+            max-width: 600px;
+            margin: 0 auto;
+            background: var(--white);
             padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            border-top: 8px solid var(--primary-color);
-        }
-
-        .google-form-box h3 {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-
-        .google-form-box p {
-            font-size: 14px;
-            color: #666;
-            margin-bottom: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
 
         .form-group {
@@ -353,307 +272,275 @@
 
         .form-group label {
             display: block;
-            font-weight: 600;
             margin-bottom: 8px;
-            color: #444;
+            font-weight: 500;
+            color: var(--dark);
         }
 
-        .form-group input, .form-group textarea {
+        .form-control {
             width: 100%;
-            padding: 12px 15px;
+            padding: 12px;
             border: 1px solid #ccc;
-            border-radius: 6px;
-            font-size: 15px;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .form-control:focus {
             outline: none;
+            border-color: var(--primary);
         }
 
-        .form-group input:focus, .form-group textarea:focus {
-            border-color: var(--primary-color);
-        }
-
-        .form-submit-btn {
-            background: var(--primary-color);
-            color: white;
-            border: none;
-            padding: 14px 30px;
-            font-size: 16px;
-            font-weight: bold;
-            border-radius: 6px;
-            cursor: pointer;
+        .btn-submit {
             width: 100%;
+            padding: 14px;
+            background-color: var(--primary);
+            color: var(--white);
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
             transition: background 0.3s;
         }
 
-        .form-submit-btn:hover {
-            background: var(--dark-color);
+        .btn-submit:hover {
+            background-color: #00344d;
         }
 
-        /* Contact Page Grid */
-        .contact-container {
-            display: grid;
-            grid-template-columns: 1fr 1.2fr;
-            gap: 40px;
+        /* Footer Section */
+        footer {
+            background-color: var(--dark);
+            color: var(--white);
+            padding: 40px 5% 20px 5%;
         }
 
-        .contact-details {
-            background: var(--primary-color);
-            color: white;
-            padding: 40px;
-            border-radius: 12px;
-        }
-
-        .contact-details h3 {
-            font-size: 24px;
-            margin-bottom: 20px;
-            color: var(--secondary-color);
-        }
-
-        .contact-info-block {
-            margin-bottom: 25px;
+        .footer-content {
             display: flex;
-            align-items: flex-start;
-            gap: 15px;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 30px;
         }
 
-        .contact-info-block i {
-            font-size: 22px;
-            color: var(--secondary-color);
-            margin-top: 5px;
+        .footer-col {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .footer-col h4 {
+            color: var(--secondary);
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        .footer-col p, .footer-col a {
+            color: #bdc3c7;
+            text-decoration: none;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .footer-col i {
+            margin-right: 10px;
+            color: var(--secondary);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid #34495e;
+            padding-top: 20px;
+            font-size: 0.9rem;
+            color: #7f8c8d;
         }
 
         /* Floating WhatsApp Button */
         .whatsapp-float {
             position: fixed;
-            bottom: 30px;
-            right: 30px;
+            bottom: 25px;
+            right: 25px;
             background-color: #25d366;
             color: white;
-            width: 65px;
-            height: 65px;
             border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+            z-index: 1000;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 34px;
-            box-shadow: 3px 3px 15px rgba(0,0,0,0.3);
-            z-index: 10000;
             text-decoration: none;
         }
 
-        /* Footer Layout */
-        footer {
-            background-color: var(--dark-color);
-            color: white;
-            padding: 60px 40px 20px 40px;
-            margin-top: 60px;
-        }
-
-        .footer-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            padding-bottom: 40px;
-            border-bottom: 1px solid #34495e;
-        }
-
-        .footer-box h3 {
-            color: var(--secondary-color);
-            margin-bottom: 22px;
-        }
-
-        .footer-box ul {
-            list-style: none;
-        }
-
-        .footer-box ul li a {
-            color: #bdc3c7;
-            text-decoration: none;
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 25px;
-            font-size: 14px;
-            color: #7f8c8d;
-        }
-
-        @media (max-width: 992px) {
-            .about-content, .contact-container {
-                grid-template-columns: 1fr;
+        /* Responsive Breakpoints */
+        @media (max-width: 768px) {
+            .top-bar {
+                flex-direction: column;
+                align-items: center;
+                gap: 5px;
+            }
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+            nav ul li {
+                margin: 0 10px;
+            }
+            .pricing-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .form-wrapper {
+                padding: 20px;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- Top Contact Bar -->
+    <!-- Top Bar Contact Info -->
     <div class="top-bar">
-        <div>
-            <span class="info-item"><i class="fa-solid fa-phone"></i> +91 9702985637</span>
-            <span class="info-item"><i class="fa-solid fa-envelope"></i> WebAdGrow@gmail.com</span>
+        <div class="contact-info">
+            <a href="tel:+919702985637"><i class="fa-solid fa-phone"></i> +91 9702985637</a>
+            <a href="mailto:webadgrow@gmail.com"><i class="fa-solid fa-envelope"></i> webadgrow@gmail.com</a>
         </div>
-        <div>
-            <span class="info-item"><i class="fa-solid fa-location-dot"></i> Santacruz East, Mumbai</span>
+        <div class="location-info">
+            <i class="fa-solid fa-location-dot"></i> Santacruz East, Mumbai
         </div>
     </div>
 
-    <!-- Main Navigation Bar -->
+    <!-- Navigation Header -->
     <header>
         <div class="logo-container">
-            <img src="1000704661.png" alt="WebAdGrow Logo">
-            <div class="logo-text">Web<span>AdGrow</span></div>
+            <!-- logo image properly loaded verbatim -->
+            <img src="1000704661_2.png" alt="WebAdGrow Logo" class="logo-img">
         </div>
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#pricing">Pricing</a></li>
-                <li><a href="#lead-form">Client Form</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#about">ABOUT US</a></li>
+                <li><a href="#pricing">PRICING</a></li>
+                <li><a href="#client-form">CLIENT FORM</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Page 1: Home Section & Banner Layout -->
-    <div class="hero-section" id="home">
-        <div class="banner-container">
-            <img src="1000704684.png" alt="WebAdGrow Banner">
-        </div>
-        <div class="hero-text">
-            <h1>"Grow Your Business with Smart Digital Marketing & Custom Web Development"</h1>
-            <p>Premium designs aur target advertising campaigns ek hi jagah par.</p>
+    <!-- Main Banner Section -->
+    <div class="banner-container">
+        <!-- Banner image properly loaded verbatim -->
+        <img src="1000704684_2.png" alt="WebAdGrow Digital Solutions Banner" class="main-banner">
+    </div>
+
+    <!-- Intro Text Block -->
+    <div class="intro-section">
+        <h1>"Grow Your Business with Smart Digital Marketing & Custom Web Development"</h1>
+        <p>Premium designs aur target advertising campaigns ek hi jagah par.</p>
+    </div>
+
+    <!-- Pricing Section -->
+    <div id="pricing">
+        <h2 class="section-title">E-Commerce & Website Pricing</h2>
+        <div class="pricing-container">
+            
+            <!-- Plan 1: Static Website -->
+            <div class="pricing-card">
+                <h3>Static Website</h3>
+                <div class="price">₹4,500 <span>/ One-Time</span></div>
+                <ul class="pricing-features">
+                    <li><i class="fa-solid fa-check"></i> Custom Website Design</li>
+                    <li><i class="fa-solid fa-check"></i> Responsive Mobile-First Architecture</li>
+                    <li><i class="fa-solid fa-check"></i> 1 Year Free Hosting</li>
+                    <li><i class="fa-solid fa-check"></i> Contact Form Integration</li>
+                    <li><i class="fa-solid fa-check"></i> Social Media Linking</li>
+                </ul>
+                <!-- WhatsApp target tailored message for Static Website -->
+                <a href="https://wa.me/919702985637?text=Hi%20WebAdGrow%2C%20I%20want%20to%20order%20Static%20Website" target="_blank" class="btn-book">Book Now</a>
+            </div>
+
+            <!-- Plan 2: Dynamic Plan (Popular) -->
+            <div class="pricing-card popular">
+                <div class="popular-badge">Popular</div>
+                <h3>Dynamic Plan</h3>
+                <div class="price">₹7,999 <span>/ One-Time</span></div>
+                <ul class="pricing-features">
+                    <li><i class="fa-solid fa-check"></i> Advanced Dynamic Architecture</li>
+                    <li><i class="fa-solid fa-check"></i> Interactive Admin Dashboard</li>
+                    <li><i class="fa-solid fa-check"></i> CMS System Included</li>
+                    <li><i class="fa-solid fa-check"></i> Premium Theme Layout</li>
+                    <li><i class="fa-solid fa-check"></i> Advanced Web Security</li>
+                </ul>
+                <!-- WhatsApp target tailored message for Dynamic Plan Website -->
+                <a href="https://wa.me/919702985637?text=Hi%20WebAdGrow%2C%20I%20want%20to%20order%20Dynamic%20Plan%20Website" target="_blank" class="btn-book">Book Now</a>
+            </div>
+
+            <!-- Plan 3: E-Commerce Plan -->
+            <div class="pricing-card">
+                <h3>E-Commerce Plan</h3>
+                <div class="price">₹14,999 <span>/ One-Time</span></div>
+                <ul class="pricing-features">
+                    <li><i class="fa-solid fa-check"></i> Online Specialized Stores</li>
+                    <li><i class="fa-solid fa-check"></i> Payment Gateway Integration</li>
+                    <li><i class="fa-solid fa-check"></i> Unlimited Product Listings</li>
+                    <li><i class="fa-solid fa-check"></i> Order Management System</li>
+                    <li><i class="fa-solid fa-check"></i> High ROI Lead Generation Tools</li>
+                </ul>
+                <!-- WhatsApp target tailored message for E-Commerce Website -->
+                <a href="https://wa.me/919702985637?text=Hi%20WebAdGrow%2C%20I%20want%20to%20order%20E-Commerce%20Website" target="_blank" class="btn-book">Book Now</a>
+            </div>
+
         </div>
     </div>
 
-    <!-- Page 2: About Us Section -->
-    <section id="about" style="background-color: #fff; max-width: 100%; padding: 80px 0;">
-        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-            <h2 class="section-title">About WebAdGrow</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <h3>We Build Digital Brands From Scratch</h3>
-                    <p>WebAdGrow Mumbai ke Santacruz East me located ek advanced technology aur high-scale marketing provider company hai. Hum alag-alag industry ke businesses ke liye solid website codes, automation aur high-converting ads perform karte hain.</p>
-                </div>
-                <div style="text-align: center;">
-                    <img src="1000704661.png" style="max-width: 250px; border-radius:50%;" alt="Branding">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Page 3: Services Section -->
-    <section id="services">
-        <h2 class="section-title">Our Solutions</h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <i class="fa-solid fa-laptop-code"></i>
-                <h3>Website Excellence</h3>
-                <ul>
-                    <li>Custom Website Design & Development</li>
-                    <li>Responsive Mobile-First Architecture</li>
-                    <li>E-Commerce Specialized Stores</li>
-                </ul>
-            </div>
-            <div class="service-card">
-                <i class="fa-solid fa-bullseye"></i>
-                <h3>Dominant Advertising</h3>
-                <ul>
-                    <li>Google Ads Management</li>
-                    <li>Facebook & Instagram Target Campaigns</li>
-                    <li>High ROI Lead Generation</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Page 4: Pricing Plans Section -->
-    <section id="pricing" style="background-color: #fff; max-width: 100%; padding: 80px 0;">
-        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-            <h2 class="section-title">E-Commerce Pricing</h2>
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <div class="plan-name">Static Website</div>
-                    <div class="plan-price">₹4,500</div>
-                    <a href="https://wa.me/919702985637?text=Static%20Plan" class="cta-btn" target="_blank">Book Now</a>
-                </div>
-                <div class="pricing-card featured">
-                    <div class="badge">POPULAR</div>
-                    <div class="plan-name">Dynamic Plan</div>
-                    <div class="plan-price">₹7,999</div>
-                    <a href="https://wa.me/919702985637?text=Dynamic%20Plan" class="cta-btn" target="_blank">Book Now</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Page 5: Integrated Registration Google Form Style -->
-    <section id="lead-form">
+    <!-- Client Lead Form Section -->
+    <div id="client-form" class="form-section">
         <h2 class="section-title">Client Registration Form</h2>
-        <p class="section-subtitle">Apni details enter karke data submit karein</p>
-        <div style="max-width: 700px; margin: 0 auto;">
-            <div class="google-form-box">
-                <h3>WebAdGrow Lead Capture Form</h3>
-                <form action="javascript:void(0);" onsubmit="alert('Thank you! Aapka data successfully save ho gaya hai.'); this.reset();">
-                    <div class="form-group">
-                        <label>Client Ka Name *</label>
-                        <input type="text" placeholder="Full name enter karein" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Mobile / WhatsApp Number *</label>
-                        <input type="tel" placeholder="10 digit number" pattern="[0-9]{10}" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Gmail Address *</label>
-                        <input type="email" placeholder="example@gmail.com" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Poora Address *</label>
-                        <textarea rows="3" placeholder="Complete address details..." required></textarea>
-                    </div>
-                    <button type="submit" class="form-submit-btn">Submit Information</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Page 6: Contact Info Section -->
-    <section id="contact" style="background-color: #fff; max-width: 100%; padding: 80px 0;">
-        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-            <h2 class="section-title">Contact Us</h2>
-            <div class="contact-container">
-                <div class="contact-details">
-                    <h3>Head Office Address</h3>
-                    <div class="contact-info-block">
-                        <i class="fa-solid fa-location-dot"></i>
-                        <p>02 jay Sainath, Datta Mandir road, vakola Santracruz East mumbai 400055</p>
-                    </div>
-                    <div class="contact-info-block">
-                        <i class="fa-solid fa-envelope"></i>
-                        <p>WebAdGrow@gmail.com</p>
-                    </div>
+        <div class="form-wrapper">
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" class="form-control" placeholder="Enter full name" required>
                 </div>
-            </div>
+                <div class="form-group">
+                    <label for="email">Gmail Address *</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="example@gmail.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Mobile Number *</label>
+                    <input type="tel" id="phone" name="phone" class="form-control" placeholder="Enter mobile number" required>
+                </div>
+                <button type="submit" class="btn-submit">Submit Details</button>
+            </form>
         </div>
-    </section>
+    </div>
 
-    <!-- Footer Area -->
+    <!-- Footer Section -->
     <footer>
-        <div class="footer-container">
-            <div class="footer-box">
-                <h3>WebAdGrow</h3>
-                <p>Smart Web Designing & Lead Generation Experts.</p>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>WebAdGrow</h4>
+                <p>We build digital brands from scratch. Hum alag-alag industry ke businesses ke liye solid website codes, automation aur high-converting ads perform karte hain.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Our Solutions</h4>
+                <a href="#">Website Excellence</a>
+                <a href="#">Dominant Advertising</a>
+                <a href="#">Digital Growth Consulting</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Details</h4>
+                <p><i class="fa-solid fa-location-dot"></i> 02 jay Sainath, Datta Mandir road, vakola Santracruz East mumbai 400055</p>
+                <p><i class="fa-solid fa-phone"></i> +91 9702985637</p>
+                <p><i class="fa-solid fa-envelope"></i> webadgrow@gmail.com</p>
             </div>
         </div>
         <div class="footer-bottom">
-            &copy; 2026 WebAdGrow. All Rights Reserved.
+            &copy; 2026 WebAdGrow. All Rights Reserved | Designed for Business Scaling.
         </div>
     </footer>
 
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/919702985637?text=Hello" class="whatsapp-float" target="_blank">
+    <!-- Floating General WhatsApp Chat Button -->
+    <a href="https://wa.me/919702985637?text=Hi%20WebAdGrow%2C%20I%20want%20to%20know%20more%20about%20your%20services." class="whatsapp-float" target="_blank">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
